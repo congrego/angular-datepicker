@@ -145,7 +145,7 @@
       <div>
         <h4>Select a date from either picker</h4>
         <div ng-bind="callbackState"></div>
-        <button ng-click="callbackState = 'Callback: Not fired'">Reset state</button>
+        <button ng-mouseup="callbackState = 'Callback: Not fired'">Reset state</button>
       </div>
       <input type="text" date-time ng-model="dates.today"  view="hours" date-change="changeDate">
       <div date-picker="dates.today" view="date" date-change="changeDate" timezone="UTC" watch-direct-changes="true"></div>

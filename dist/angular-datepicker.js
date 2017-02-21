@@ -949,11 +949,11 @@ $templateCache.put('templates/datepicker.html',
     "\n" +
     "      <tr>\r" +
     "\n" +
-    "        <th ng-mousedown=\"prev()\">&lsaquo;</th>\r" +
+    "        <th ng-mouseup=\"prev()\">&lsaquo;</th>\r" +
     "\n" +
-    "        <th colspan=\"5\" class=\"switch\" ng-mousedown=\"setView('month')\" ng-bind=\"date|mFormat:'YYYY MMMM':tz\"></th>\r" +
+    "        <th colspan=\"5\" class=\"switch\" ng-mouseup=\"setView('month')\" ng-bind=\"date|mFormat:'YYYY MMMM':tz\"></th>\r" +
     "\n" +
-    "        <th ng-mousedown=\"next()\">&rsaquo;</i></th>\r" +
+    "        <th ng-mouseup=\"next()\">&rsaquo;</i></th>\r" +
     "\n" +
     "      </tr>\r" +
     "\n" +
@@ -975,7 +975,7 @@ $templateCache.put('templates/datepicker.html',
     "\n" +
     "            ng-class=\"classes[$index2][$index]\"\r" +
     "\n" +
-    "            ng-mousedown=\"selectDate(day)\" ng-bind=\"day|mFormat:'DD':tz\"></span>\r" +
+    "            ng-mouseup=\"selectDate(day)\" ng-bind=\"day|mFormat:'DD':tz\"></span>\r" +
     "\n" +
     "        </td>\r" +
     "\n" +
@@ -995,11 +995,11 @@ $templateCache.put('templates/datepicker.html',
     "\n" +
     "      <tr>\r" +
     "\n" +
-    "        <th ng-mousedown=\"prev(10)\">&lsaquo;</th>\r" +
+    "        <th ng-mouseup=\"prev(10)\">&lsaquo;</th>\r" +
     "\n" +
     "        <th colspan=\"5\" class=\"switch\"ng-bind=\"years[0].year()+' - '+years[years.length-1].year()\"></th>\r" +
     "\n" +
-    "        <th ng-mousedown=\"next(10)\">&rsaquo;</i></th>\r" +
+    "        <th ng-mouseup=\"next(10)\">&rsaquo;</i></th>\r" +
     "\n" +
     "      </tr>\r" +
     "\n" +
@@ -1015,7 +1015,7 @@ $templateCache.put('templates/datepicker.html',
     "\n" +
     "                ng-repeat=\"year in years\"\r" +
     "\n" +
-    "                ng-mousedown=\"selectDate(year)\" ng-bind=\"year.year()\"></span>\r" +
+    "                ng-mouseup=\"selectDate(year)\" ng-bind=\"year.year()\"></span>\r" +
     "\n" +
     "        </td>\r" +
     "\n" +
@@ -1035,11 +1035,11 @@ $templateCache.put('templates/datepicker.html',
     "\n" +
     "      <tr>\r" +
     "\n" +
-    "        <th ng-mousedown=\"prev()\">&lsaquo;</th>\r" +
+    "        <th ng-mouseup=\"prev()\">&lsaquo;</th>\r" +
     "\n" +
-    "        <th colspan=\"5\" class=\"switch\" ng-mousedown=\"setView('year')\" ng-bind=\"date|mFormat:'YYYY':tz\"></th>\r" +
+    "        <th colspan=\"5\" class=\"switch\" ng-mouseup=\"setView('year')\" ng-bind=\"date|mFormat:'YYYY':tz\"></th>\r" +
     "\n" +
-    "        <th ng-mousedown=\"next()\">&rsaquo;</i></th>\r" +
+    "        <th ng-mouseup=\"next()\">&rsaquo;</i></th>\r" +
     "\n" +
     "      </tr>\r" +
     "\n" +
@@ -1055,7 +1055,7 @@ $templateCache.put('templates/datepicker.html',
     "\n" +
     "                ng-class=\"classes[$index]\"\r" +
     "\n" +
-    "                ng-mousedown=\"selectDate(month)\"\r" +
+    "                ng-mouseup=\"selectDate(month)\"\r" +
     "\n" +
     "                ng-bind=\"month|mFormat:'MMM':tz\"></span>\r" +
     "\n" +
@@ -1077,11 +1077,11 @@ $templateCache.put('templates/datepicker.html',
     "\n" +
     "      <tr>\r" +
     "\n" +
-    "        <th ng-mousedown=\"prev(24)\">&lsaquo;</th>\r" +
+    "        <th ng-mouseup=\"prev(24)\">&lsaquo;</th>\r" +
     "\n" +
-    "        <th colspan=\"5\" class=\"switch\" ng-mousedown=\"setView('date')\" ng-bind=\"date|mFormat:'DD MMMM YYYY':tz\"></th>\r" +
+    "        <th colspan=\"5\" class=\"switch\" ng-mouseup=\"setView('date')\" ng-bind=\"date|mFormat:'DD MMMM YYYY':tz\"></th>\r" +
     "\n" +
-    "        <th ng-mousedown=\"next(24)\">&rsaquo;</i></th>\r" +
+    "        <th ng-mouseup=\"next(24)\">&rsaquo;</i></th>\r" +
     "\n" +
     "      </tr>\r" +
     "\n" +
@@ -1097,7 +1097,7 @@ $templateCache.put('templates/datepicker.html',
     "\n" +
     "                ng-class=\"classes[$index]\"\r" +
     "\n" +
-    "                ng-mousedown=\"selectDate(hour)\" ng-bind=\"hour|mFormat:'HH:mm':tz\"></span>\r" +
+    "                ng-mouseup=\"selectDate(hour)\" ng-bind=\"hour|mFormat:'HH:mm':tz\"></span>\r" +
     "\n" +
     "        </td>\r" +
     "\n" +
@@ -1117,11 +1117,11 @@ $templateCache.put('templates/datepicker.html',
     "\n" +
     "      <tr>\r" +
     "\n" +
-    "        <th ng-mousedown=\"prev()\">&lsaquo;</th>\r" +
+    "        <th ng-mouseup=\"prev()\">&lsaquo;</th>\r" +
     "\n" +
-    "        <th colspan=\"5\" class=\"switch\" ng-mousedown=\"setView('hours')\" ng-bind=\"date|mFormat:'DD MMMM YYYY':tz\"></th>\r" +
+    "        <th colspan=\"5\" class=\"switch\" ng-mouseup=\"setView('hours')\" ng-bind=\"date|mFormat:'DD MMMM YYYY':tz\"></th>\r" +
     "\n" +
-    "        <th ng-mousedown=\"next()\">&rsaquo;</i></th>\r" +
+    "        <th ng-mouseup=\"next()\">&rsaquo;</i></th>\r" +
     "\n" +
     "      </tr>\r" +
     "\n" +
@@ -1137,7 +1137,7 @@ $templateCache.put('templates/datepicker.html',
     "\n" +
     "                ng-class=\"classes[$index]\"\r" +
     "\n" +
-    "                ng-mousedown=\"selectDate(minute)\"\r" +
+    "                ng-mouseup=\"selectDate(minute)\"\r" +
     "\n" +
     "                ng-bind=\"minute|mFormat:'HH:mm':tz\"></span>\r" +
     "\n" +
