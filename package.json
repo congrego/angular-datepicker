@@ -1,9 +1,9 @@
 {
-  "name": "rz-angular-datepicker",
+  "name": "angular-datepicker",
   "version": "2.1.3A",
   "main": "dist/angular-datepicker.js",
   "repository": {
-    "url": "https://github.com/congrego/rz-angular-datepicker"
+    "url": "https://github.com/g00fy-/angular-datepicker.git"
   },
   "dependencies": {},
   "devDependencies": {
