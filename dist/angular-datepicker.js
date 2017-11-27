@@ -360,9 +360,13 @@ Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', function 
         return scope.date;
       }
 
-      function notifyDateChanges() {
-        if (scope.onDateChanged) {
-          scope.onDateChanged(scope.date);
+      function notifyDateChanges(newValue, oldValue) {
+        if (newValue === oldValue) {
+          return;
+        }
+        
+        if (attrs.onDateChanged) {
+          attrs.onDateChanged(scope.date);
         }
       }
 
