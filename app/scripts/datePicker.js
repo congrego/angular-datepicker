@@ -364,10 +364,17 @@ Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', function 
         if (newValue === oldValue) {
           return;
         }
-        
-        if (attrs.onDateChanged) {
-          attrs.onDateChanged(scope.date);
+
+        if (!attrs.onDateChanged) {
+          return;
         }
+        
+        var expressionHandler = $parse(attrs.onDateChanged);
+        if (!expressionHandler) {
+          return;
+        }
+          
+        expressionHandler(scope.date);
       }
 
       var dateChangesNotifier = scope.$watch(watchDateChanges, notifyDateChanges);
