@@ -355,6 +355,19 @@ Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', function 
           }
         });
       }
+
+      function watchDateChanges() {
+        return scope.date;
+      }
+
+      function notifyDateChanges() {
+        if (scope.onDateChanged) {
+          scope.onDateChanged(scope.date);
+        }
+      }
+
+      var dateChangesNotifier = scope.$watch(watchDateChanges, notifyDateChanges);
+      scope.$on('$destroy', dateChangesNotifier);
     }
   };
 }]);

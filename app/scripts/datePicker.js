@@ -361,8 +361,9 @@ Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', function 
       }
 
       function notifyDateChanges() {
-        if (scope.onDateChanged)
-          scope.onDateChanged();
+        if (scope.onDateChanged) {
+          scope.onDateChanged(scope.date);
+        }
       }
 
       var dateChangesNotifier = scope.$watch(watchDateChanges, notifyDateChanges);
