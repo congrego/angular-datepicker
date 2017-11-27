@@ -31,7 +31,7 @@ Module.filter('mFormat', function () {
   };
 });
 
-Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', '$parse', function datePickerDirective(datePickerConfig, datePickerUtils, $parse) {
+Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', function datePickerDirective(datePickerConfig, datePickerUtils) {
 
   //noinspection JSUnusedLocalSymbols
   return {
@@ -357,7 +357,7 @@ Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', '$parse',
       }
 
       function watchDateChanges() {
-        return scope.date;
+        return scope.date.toString();
       }
 
       function notifyDateChanges(newValue, oldValue) {
@@ -365,16 +365,7 @@ Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', '$parse',
           return;
         }
 
-        if (!attrs.onDateChanged) {
-          return;
-        }
-        
-        var expressionHandler = $parse(attrs.onDateChanged);
-        if (!expressionHandler) {
-          return;
-        }
-          
-        expressionHandler(scope.date);
+        scope.$emit('onDateChanged', moment(newValue));
       }
 
       var dateChangesNotifier = scope.$watch(watchDateChanges, notifyDateChanges);
