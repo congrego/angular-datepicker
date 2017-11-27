@@ -21,7 +21,6 @@
   "globals": {
     "angular": false,
     "define": false,
-    "moment": false,
-    "$parse": false
+    "moment": false
   }
 }

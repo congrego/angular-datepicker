@@ -31,7 +31,7 @@ Module.filter('mFormat', function () {
   };
 });
 
-Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', function datePickerDirective(datePickerConfig, datePickerUtils) {
+Module.directive('datePicker', ['datePickerConfig', 'datePickerUtils', '$parse', function datePickerDirective(datePickerConfig, datePickerUtils, $parse) {
 
   //noinspection JSUnusedLocalSymbols
   return {
